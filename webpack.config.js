@@ -27,7 +27,7 @@ module.exports = (options = {}) => ({
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader']
+        use: ['file-loader?name=[name].[ext]&outputPath=mycss/', 'extract-loader', 'css-loader'] // ['style-loader', 'css-loader', 'postcss-loader']
       },
       {
         test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
